@@ -18,7 +18,15 @@
   --shadow-sm: 0 1px 2px rgb(0 0 0 / 5%);
 }
 
+@layer components {
+  .main-container {
+    @apply w-full max-w-[1200px] mx-auto px-4;
+  }
+}
 
+.btn-primary {
+  @apply mt-5 rounded-md bg-[#c5ff00] px-6 py-3 text-xs font-bold text-black hover:bg-[#b3e600]
+}
 
 html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 
