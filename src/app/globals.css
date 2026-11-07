@@ -1,2 +1,32 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+:root {
+  --bg: #0c0d10;
+  --panel: #15171d;
+  --panel-2: #1f232b;
+  --line: #222630;
+  --line-soft: #20242e;
+  --muted: #9ca3af;
+  --muted-2: #8a92a0;
+  --text: #ffffff;
+  --text-soft: #d1d5db;
+  --accent: #c2f800;
+  --accent-soft: #1a2312;
+  --font-display: var(--font-oswald), Impact, sans-serif;
+  --font-body: var(--font-inter), Arial, sans-serif;
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 5%);
+}
+
+
+
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+}
