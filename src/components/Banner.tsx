@@ -6,7 +6,7 @@ const Banner = () => {
     
      <section className="w-full bg-black px-3 sm:px-4 my-6 md:my-10">
 
-       <div className="hero w-full main-container  min-h-[330px] rounded-xl bg-[#15171c] px-2 py-4 sm:px-4 md:py-6 lg:px-6">
+       <div className="hero w-full main-container  min-h-[330px] rounded-xl border border-solid border-[#21242b] bg-[#15171c] px-2 py-4 sm:px-4 md:py-6 lg:px-6">
 
         <div className="hero-content flex-col-reverse justify-between gap-6 w-full max-w-none px-4 py-8 md:flex-row-reverse md:gap-8 md:px-10">
 
@@ -14,7 +14,7 @@ const Banner = () => {
           <img
             src="/assets/banner.png"
             alt="Workout illustration"
-            className="w-full max-w-[220px] object-contain md:max-w-[250px] md:ml-auto"
+            className="w-full max-w-[330px] object-contain md:max-w-[330px] md:ml-auto"
           />
 
           {/* Banner Content */}
