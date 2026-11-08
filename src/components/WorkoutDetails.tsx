@@ -6,19 +6,18 @@ import { FaPlus, FaRegBookmark } from "react-icons/fa";
 
 const WorkoutDetails = ({ workout }: { workout: Workout }) => {
   
-//     const addToPlan = () => {
-//   const plan = JSON.parse(localStorage.getItem("fitlog-plan") || "[]");
 
-//   if (plan.some((item: Workout) => item.id === workout.id)) {
-//     alert("Already added to your plan!");
-//     return;
-//   }
 
-  const addToPlan = () => {
+ const addToPlan = () => {
   const plan = JSON.parse(localStorage.getItem("fitlog-plan") || "[]");
 
   if (plan.some((item: Workout) => item.id === workout.id)) {
     toast.error("Already added to your plan!");
+    return;
+  }
+
+  if (plan.length >= 5) {
+    toast.error("Your plan is full! Maximum 5 lifts per day.");
     return;
   }
 
