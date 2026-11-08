@@ -4,8 +4,8 @@
 
 FitLog is a workout planning web application. Users can explore workouts, create daily plans, and save their favorite exercises.
 
-**Live Demo:** [FitLog](https://a6-fit-log-workout.vercel.app/)  
-**GitHub Repository:** [Add your repository link here]
+**Live Link:** [FitLog](https://fit-log-sandy-one.vercel.app)  
+**GitHub Repository:** [https://github.com/monima40/fit-log.git]
 
 ## About
 
