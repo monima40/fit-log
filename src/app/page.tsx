@@ -1,13 +1,23 @@
 import Banner from "@/components/Banner";
-// import WorkoutCard from "@/components/WorkoutCard";
+import WorkoutCard from "@/components/WorkoutCard";
+import { getWorkoutCard } from "@/lib/api";
 import Image from "next/image";
+import { Workout } from "@/types/type";
 
-export default function Home() {
+  
+
+export default async function Home() {
+  
+   const workoutCard = await getWorkoutCard();
+
+  // console.log("Workout Data:", workoutCard);
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+    <div >
     <Banner />
-     {/* 
-     <WorkoutCard/> */}
+     
+      <WorkoutCard workoutCard={workoutCard} />
     </div>
   );
 }
+
+export const instant = false;

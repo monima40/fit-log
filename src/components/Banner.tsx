@@ -35,8 +35,8 @@ const Banner = () => {
               into today's plan, and watch the week's work add up.
             </p>
 
-            <button className="btn-primary ">
-              BROWSE WORKOUTS
+            <button className="btn-primary "><a href="#workouts"> BROWSE WORKOUTS  </a>
+             
             </button>
 
           </div>
