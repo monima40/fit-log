@@ -1,5 +1,6 @@
 
 import React from "react";
+import { FaArrowDown } from "react-icons/fa";
 
 const Banner = () => {
   return (
@@ -35,9 +36,10 @@ const Banner = () => {
               into today's plan, and watch the week's work add up.
             </p>
 
-            <button className="btn-primary "><a href="#workouts"> BROWSE WORKOUTS  </a>
-             
-            </button>
+            <a href="#library" className="btn-primary inline-flex items-center gap-2">
+  BROWSE WORKOUTS
+
+</a>
 
           </div>
         </div>

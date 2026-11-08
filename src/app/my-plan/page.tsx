@@ -13,6 +13,7 @@ import { Suspense } from "react";
 
 const MyPlanContent = () => {
     const searchParams = useSearchParams();
+    const [loading, setLoading] = useState(true);
 
     const [plan, setPlan] = useState<PlanWorkout[]>([]);
 const [saved, setSaved] = useState<PlanWorkout[]>([]);
@@ -45,6 +46,7 @@ useEffect(() => {
       isDone: item.isDone ?? false,
     }))
   );
+  setLoading(false);
 }, []);
 // const displayedWorkouts = activeTab === "plan" ? plan : saved;
 const displayedWorkouts = [...(activeTab === "plan" ? plan : saved)].sort((a, b) => {
@@ -171,7 +173,9 @@ className={`rounded-lg px-5 py-3 text-sm font-semibold transition-all ${
 </div>
       
       <div className="mt-8 space-y-4">
-  {displayedWorkouts.length === 0 ? (
+  {loading ? (
+  <p className="py-16 text-center text-gray-400">Loading workouts…</p>
+) : displayedWorkouts.length === 0 ? (
     <div className="rounded-2xl border border-dashed border-gray-800 bg-[#0f1116] py-20 text-center">
   <h2 className="text-xl font-bold uppercase text-white">Nothing here yet</h2>
   <p className="mt-2 text-sm text-gray-400">

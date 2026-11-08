@@ -1,6 +1,7 @@
 
 
 "use client";
+import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
 import Image from "next/image";
@@ -9,6 +10,12 @@ import Link from "next/link";
 const Navbar = () => {
 
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+const linkClass = (active: boolean) =>
+  active
+    ? "rounded-full bg-[#171d0c] px-6 py-3 font-bold text-[#c5ff00]"
+    : "px-3 py-3 font-semibold text-gray-400 hover:text-white";
   
     const [planCount, setPlanCount] = useState(0);
 const [savedCount, setSavedCount] = useState(0);
@@ -43,7 +50,7 @@ useEffect(() => {
 
         {/* Navigation Links */}
         <div className="hidden md:flex items-center gap-3">
-          <a
+          {/* <a
             href="/#library"
             className="rounded-full bg-[#171d0c] px-6 py-3 font-bold text-[#c5ff00]"
           >
@@ -55,7 +62,21 @@ useEffect(() => {
             className="px-3 py-3 font-semibold text-gray-400 hover:text-white"
           >
             My Plan
-          </Link>
+          </Link> */}
+
+          <Link
+  href="/#library"
+  className={linkClass(pathname === "/" || pathname.startsWith("/workout"))}
+>
+  Workouts
+</Link>
+
+<Link
+  href="/my-plan"
+  className={linkClass(pathname === "/my-plan")}
+>
+  My Plan
+</Link>
         </div>
 
         {/* Right Side */}
