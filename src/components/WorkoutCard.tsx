@@ -14,7 +14,7 @@ const WorkOutCard = ({ workoutCard }: { workoutCard: Workout[] }) => {
 
 
   return (
-    <section  id="workouts" className="main-container py-10  ">
+    <section  id="library" className="main-container py-10  ">
       <h2 className="font-[var(--font-oswald)] text-2xl font-extrabold uppercase leading-tight text-white sm:text-3xl md:text-4xl">The Library</h2>
 
       <p className="mb-8 text-gray-400">

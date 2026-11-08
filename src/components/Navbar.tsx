@@ -44,7 +44,7 @@ useEffect(() => {
         {/* Navigation Links */}
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="/#workouts"
+            href="/#library"
             className="rounded-full bg-[#171d0c] px-6 py-3 font-bold text-[#c5ff00]"
           >
             Workouts
@@ -108,7 +108,7 @@ useEffect(() => {
   {menuOpen && (
     <div className="absolute right-0 top-10 z-50 w-44 rounded-lg border border-gray-700 bg-[#15181d] p-4 shadow-lg">
 
-      <a  href="/#workouts" className="block py-2 text-white">
+      <a  href="/#library" className="block py-2 text-white">
         Workouts
       </a>
 
